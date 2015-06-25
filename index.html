@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+    </script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+    <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+    <link rel="import" href="bower_components/paper-material/paper-material.html">
+    <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/iron-form-element-behavior/iron-form-element-behavior.html">
+    <link rel="import" href="bower_components/paper-slider/paper-slider.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html" rel="import">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700italic' rel='stylesheet' type='text/css'>
+</head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: #fafafa;
+    }
+
+    h1 {
+        font-family: 'Droid Serif', serif;
+    }
+
+    .main_body {
+        background: white;
+    }
+
+    paper-radio-button {
+        display: block;
+    }
+
+    paper-slider {
+        width: 70%;
+    }
+    
+    #submit_form {
+        margin-top: 40px;
+        align-items: center;
+        background: #173ab5;
+        color: #fff;
+    }
+
+    @media screen and (min-width: 200px) {
+        .main_body {
+            width: 600px;
+            height: 100%;
+            padding: 80px 20px 80px 20px;
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        .main_body {
+            width: 600px;
+            height: 100%;
+            padding: 80px 80px 80px 80px;
+            margin-top: 20px
+        }
+    }
+
+</style>
+<body class="fullbleed layout vertical">
+<paper-header-panel mode="cover">
+    <paper-toolbar class="tall" style="background: black">
+    </paper-toolbar>
+    <div class="horizontal center-justified layout">
+        <paper-material class="main_body">
+            <h1>GBG KL event pre registration form</h1>
+            <form id="form"
+                  action="https://docs.google.com/forms/d/1y5CpsxORVET3JsD90pFt49vD7u35W5A0NwyXF7jxdaQ/formResponse"
+                  method="POST">
+                <paper-input type="text" name="entry.473862117" id="entry_473862117"
+                             label="Name" required></paper-input>
+                <paper-input type="email" name="entry.181576758" id="entry_181576758"
+                             label="Email" required></paper-input>
+
+                <input name="entry.327963516" id="input_work" style="visibility: hidden; widows: 0; height: 0;">
+
+                <h3>Which one of these best describe you</h3>
+                <paper-radio-group selected="work1" class="work">
+                    <paper-radio-button
+                            name="work1"
+                            label="I am working for a reputable company"
+                            >I am working for a reputable company
+                    </paper-radio-button>
+                    <paper-radio-button
+                            name="work2"
+                            label="I am working for others and I am working on my own startup on the side"
+                            >I am working for others and I am working on my own startup on the side
+                    </paper-radio-button>
+                    <paper-radio-button
+                            name="work3"
+                            label="I am part of a startup"
+                            >I am part of a startup
+                    </paper-radio-button>
+                    <paper-radio-button
+                            name="work4"
+                            label="I am a freelancer"
+                            >I am a freelancer
+                    </paper-radio-button>
+                    <paper-radio-button
+                            name="work5"
+                            label="I am a student"
+                            >I am a student
+                    </paper-radio-button>
+                    <paper-radio-button
+                            name="work6"
+                            label="I am unemployed"
+                            >I am unemployed
+                    </paper-radio-button>
+                </paper-radio-group>
+
+                <paper-input type="text" name="entry.833200751" value="" label="Name of Company/Organization"
+                             required></paper-input>
+
+                <input name="entry.1798313461" id="input_market" style="visibility: hidden; widows: 0; height: 0;">
+
+                <h3>Have you been engaged into any online marketing campaigns?</h3>
+                <paper-radio-group selected="market1" class="market">
+                    <paper-radio-button
+                            name="market1"
+                            label="Yes"
+                            >Yes
+                    </paper-radio-button>
+                    <paper-radio-button
+                            name="market2"
+                            label="No"
+                            >No
+                    </paper-radio-button>
+                </paper-radio-group>
+                <input name="entry.1742028360" id="input_adword" style="visibility: hidden; widows: 0; height: 0;">
+
+                <h3>Did you use Google Adwords in any of your campaigns?</h3>
+                <paper-radio-group selected="adword1" class="adword">
+                    <paper-radio-button
+                            name="adword1"
+                            label="Yes"
+                            >Yes
+                    </paper-radio-button>
+                    <paper-radio-button
+                            name="adword2"
+                            label="No"
+                            >No
+                    </paper-radio-button>
+                </paper-radio-group>
+                <h3>How do you rate your experience in using Google Adwords?</h3>
+                <h4>Only applies if you tick 'yes' from the previous question</h4>
+                <input name="entry.603590154" id="input_slider" style="visibility: hidden; widows: 0; height: 0;">
+                <div style="width: 100%;">Bad
+                    <paper-slider snaps min="1" max="5" step="1" value="3" id="adword_slider"></paper-slider>
+                    Good
+                </div>
+                <input type="hidden" name="draftResponse" value="[,,&quot;6889500357272642569&quot;]"/>
+                <input type="hidden" name="pageHistory" value="0"/>
+                <input type="hidden" name="fbzx" value="6889500357272642569"/>
+                <div style="width: 100%; text-align: right">
+                    <paper-fab raised id="submit_form" icon="send">Submit</paper-fab>
+                    <button style="visibility: hidden" id="real_send" type="submit">Submit</button>
+                </div>
+            </form>
+        </paper-material>
+    </div>
+</paper-header-panel>
+
+<script>
+    $(function () {
+        $('.work paper-radio-button').on('click', function () {
+            $('#input_work').val(($(this).attr('label')))
+        });
+        $('.market paper-radio-button').on('click', function () {
+            $('#input_market').val(($(this).attr('label')))
+        });
+        $('.adword paper-radio-button').on('click', function () {
+            $('#input_adword').val(($(this).attr('label')))
+        });
+        $('#adword_slider').on('value-change', function() {
+            $('#input_slider').val(this.value)
+        });
+        $('#submit_form').click(function(){
+            $('#real_send').trigger('click')
+        });
+
+        function initValues(){
+            $('.work paper-radio-button').first().trigger('click');
+            $('.market paper-radio-button').first().trigger('click');
+            $('.adword paper-radio-button').first().trigger('click');
+            $('#adword_slider').trigger('value-change');
+        }
+
+        function removeNames(){
+            $('.work paper-radio-button').attr('name', '');
+            $('.market paper-radio-button').attr('name', '');
+            $('.adword paper-radio-button').attr('name', '');
+        }
+
+        initValues();
+
+    });
+</script>
+</body>
+</html>
